@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09070b">
+<meta name="description" content="Uma experiência romântica e interativa para celebrar nossa história."><title>Nossa História — Gaby</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+:root{--bg:#09070b;--panel:#151017;--panel2:#1d1420;--wine:#8f2347;--rose:#d66b8c;--gold:#d7b879;--text:#f8edf1;--muted:#bbaab3;--line:#49303d;--glow:rgba(214,107,140,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:radial-gradient(ellipse at 15% 5%,#291321 0,transparent 34%),radial-gradient(ellipse at 90% 35%,#17152b 0,transparent 35%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(1px 1px at 12% 18%,#fff 99%,transparent),radial-gradient(1px 1px at 72% 9%,#fff 99%,transparent),radial-gradient(1px 1px at 86% 68%,#fff 99%,transparent),radial-gradient(1px 1px at 34% 77%,#fff 99%,transparent),radial-gradient(2px 2px at 58% 43%,#e8b9c8 99%,transparent);background-size:280px 230px;z-index:-1}
+#particles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.particle{position:absolute;color:#d98ba5;opacity:.45;animation:float linear infinite}@keyframes float{from{transform:translateY(110vh) rotate(0);opacity:0}15%{opacity:.5}to{transform:translateY(-15vh) rotate(300deg);opacity:0}}
+main,header,footer{position:relative;z-index:1}.serif{font-family:'Cormorant Garamond',serif}.gold{color:var(--gold)}.muted{color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.25em;color:var(--gold);font-size:.68rem;font-weight:600}
+button{font:inherit;cursor:pointer}.btn{border:1px solid rgba(215,184,121,.55);border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#8d2348,#51172f);color:white;box-shadow:0 8px 30px var(--glow);transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(214,107,140,.3)}.btn.ghost{background:transparent;border-color:var(--line);box-shadow:none;color:var(--text)}.btn.small{padding:9px 15px;font-size:.82rem}
+#intro{min-height:100svh;display:grid;place-items:center;text-align:center;padding:40px 20px;position:relative}.intro-inner{max-width:760px}.orb{width:116px;height:116px;border-radius:50%;margin:0 auto 28px;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#f4bdcb,#a42e57 45%,#351020 75%);box-shadow:0 0 35px #a42e5766,0 0 100px #a42e5733;animation:pulse 3s infinite}.orb span{font-size:42px;filter:drop-shadow(0 0 10px #fff7)}@keyframes pulse{50%{transform:scale(1.07);box-shadow:0 0 55px #d66b8c88,0 0 120px #a42e5755}}
+h1{font:500 clamp(3.4rem,10vw,7rem)/.85 'Cormorant Garamond',serif;letter-spacing:.015em;margin:15px 0 20px}h2{font:500 clamp(2.2rem,6vw,4rem)/.95 'Cormorant Garamond',serif;margin:8px 0 15px}h3{font:500 1.65rem 'Cormorant Garamond',serif;margin:5px 0 10px}.intro-sub{font:300 clamp(1rem,2.5vw,1.2rem);color:#d6c4cc;max-width:550px;margin:0 auto 28px;line-height:1.8}.counter{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:28px 0}.timebox{min-width:78px;padding:13px 12px;border:1px solid #694052;background:#160e16bb;border-radius:13px}.timebox strong{display:block;font:600 1.8rem 'Cormorant Garamond',serif;color:var(--gold)}.timebox span{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#09070be8;backdrop-filter:blur(16px);border-bottom:1px solid #35232e;padding:12px max(18px,calc((100% - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font:600 1.35rem 'Cormorant Garamond',serif;letter-spacing:.08em}.navlinks{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.navlinks button{background:transparent;border:0;color:#cbb9c2;padding:8px 10px;border-radius:20px;font-size:.78rem}.navlinks button:hover{background:#281923;color:white}
+#site{display:none}.wrap{max-width:1100px;margin:auto;padding:80px 22px}.center{text-align:center}.section-head{max-width:680px;margin:0 auto 38px;text-align:center}.section-head p{color:var(--muted);line-height:1.8}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#1d1420eF,#100c13);border:1px solid #49303d;border-radius:20px;padding:23px;position:relative;overflow:hidden;transition:.25s}.card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0,rgba(143,35,71,.2),transparent 45%);pointer-events:none}.card:hover{transform:translateY(-4px);border-color:#a45b75;box-shadow:0 15px 40px #0006}.icon{font-size:1.8rem;margin-bottom:13px}.card p{color:var(--muted);line-height:1.7;font-size:.9rem}.card button{margin-top:8px}.chapter{display:flex;gap:14px;align-items:flex-start}.chapter .icon{font-size:1.5rem}
+.timeline{max-width:760px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:18px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),var(--wine),transparent)}.event{position:relative;padding:0 0 28px 55px}.event:before{content:"";position:absolute;left:11px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--wine);border:2px solid var(--gold);box-shadow:0 0 15px var(--rose)}.event p{color:var(--muted);line-height:1.7;margin:6px 0}
+.locked{opacity:.65}.surprise-grid{grid-template-columns:repeat(5,1fr)}.surprise{min-height:155px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}.surprise .box{font-size:2.3rem;filter:drop-shadow(0 0 12px #d66b8c55)}.surprise.opened{border-color:var(--gold);background:linear-gradient(145deg,#2a1824,#151017)}.surprise small{color:var(--gold);margin-top:9px;letter-spacing:.08em}
+.realm{min-height:190px}.realm .icon{font-size:2.4rem}
+.progress-shell{height:7px;background:#33232c;border-radius:9px;overflow:hidden;margin:20px auto;max-width:450px}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--wine),var(--gold));transition:.4s}
+.modal{position:fixed;inset:0;background:#050307d9;backdrop-filter:blur(10px);display:none;place-items:center;padding:20px;z-index:30}.modal.show{display:grid}.modalbox{max-width:560px;width:100%;padding:30px;border:1px solid #8d5368;border-radius:24px;background:linear-gradient(145deg,#241522,#100c13);box-shadow:0 20px 80px #000b;text-align:center;animation:appear .3s ease}@keyframes appear{from{transform:translateY(15px) scale(.97);opacity:0}to{transform:none;opacity:1}}.modalbox p{color:#d5c4cc;line-height:1.8}.close{float:right;background:transparent;border:0;color:#e8c8d3;font-size:1.4rem}
+.gamebox{max-width:650px;margin:auto}.answer{display:block;width:100%;text-align:left;margin:9px 0;padding:13px 16px;background:#1b121b;border:1px solid #523344;color:var(--text);border-radius:12px}.answer:hover{border-color:var(--gold);background:#2a1925}.door-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.door{width:115px;height:145px;border:1px solid var(--gold);border-radius:55px 55px 12px 12px;background:linear-gradient(#55233d,#1b111b);font-size:2rem;color:#f6dce5;box-shadow:0 10px 30px #0007}.heart-board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;margin:20px auto}.heart-tile{aspect-ratio:1;border:1px solid #654054;background:#1a111a;border-radius:12px;font-size:1.8rem}.heart-tile.found{background:#4a1c34;border-color:var(--gold)}
+textarea,input{width:100%;background:#100c13;border:1px solid #604052;border-radius:12px;padding:14px;color:white;font:inherit;outline:none}textarea:focus,input:focus{border-color:var(--gold)}textarea{min-height:130px;resize:vertical}.field{margin:14px 0;text-align:left}.field label{display:block;color:var(--gold);font-size:.82rem;margin-bottom:7px}.note{font-size:.8rem;color:#a995a0;line-height:1.6}
+footer{text-align:center;padding:45px 20px 60px;border-top:1px solid #35232e;color:#9e8994}.footer-heart{color:var(--rose);font-size:1.4rem}
+#letter{background:radial-gradient(ellipse at center,#34182a,#100b12 65%);border:1px solid #795065;border-radius:26px;padding:clamp(25px,6vw,55px);max-width:820px;margin:auto;box-shadow:0 20px 70px #0008}.letter-text{font:400 clamp(1.2rem,2.6vw,1.55rem)/1.7 'Cormorant Garamond',serif;color:#f5e4ea;white-space:pre-line}
+.theme-toggle{border:1px solid #57404c;background:#160f17;color:var(--gold);border-radius:20px;padding:8px 12px;font-size:.75rem}
+body.light{--bg:#211720;--panel:#30212c;--text:#fff5f8;--muted:#ddcbd3;background:radial-gradient(ellipse at 15% 5%,#54243a 0,transparent 40%),#211720}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.surprise-grid{grid-template-columns:repeat(2,1fr)}nav{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start}.wrap{padding:65px 18px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.counter{gap:6px}.timebox{min-width:68px;padding:10px 8px}.timebox strong{font-size:1.5rem}.navlinks button{padding:7px 8px}.surprise-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+<section id="intro">
+ <div class="intro-inner">
+  <div class="orb"><span>♥</span></div>
+  <div class="eyebrow">uma história feita de nós</div>
+  <h1>Nossa <span class="gold">História</span></h1>
+  <p class="intro-sub">Dois corações, tantos capítulos e um futuro inteiro esperando para ser escrito.</p>
+  <div class="eyebrow">desde 01 · 04 · 2026</div>
+  <div class="counter" id="introCounter"></div>
+  <button class="btn" onclick="enterSite()">Entrar na nossa história <span>♥</span></button>
+  <p class="note" style="margin-top:18px">Feito com carinho, para Gaby.</p>
+ </div>
+</section>
+<div id="site">
+<nav><div class="brand">N<span class="gold">♥</span>SSA HISTÓRIA</div><div class="navlinks">
+<button onclick="go('inicio')">Início</button><button onclick="go('historia')">História</button><button onclick="go('perdao')">Perdão</button><button onclick="go('surpresas')">Surpresas</button><button onclick="go('universo')">Universo</button><button onclick="go('jogos')">Jogos</button><button onclick="go('futuro')">Futuro</button><button onclick="go('gabynota')">Gaby</button><button onclick="goFinal()">Final</button>
+<button class="theme-toggle" onclick="document.body.classList.toggle('light')">◐ Tema</button>
+</div></nav>
+<main>
+<section class="wrap center" id="inicio">
+ <div class="eyebrow">capítulo especial</div><h2>Que bom que <span class="gold">é você.</span></h2>
+ <p class="muted" style="max-width:650px;margin:0 auto;line-height:1.9">Nem todos os dias são iguais, nem todos os capítulos são fáceis. Mas cada página dessa história representa algo que vale a pena cuidar: nós.</p>
+ <div class="counter" id="mainCounter"></div>
+ <div class="progress-shell"><div class="progress" id="progress"></div></div><p class="note" id="progressText">0 de 10 surpresas descobertas</p>
+ <button class="btn small" onclick="go('surpresas')">Começar a descobrir ✨</button>
+</section>
+<section class="wrap" id="historia">
+ <div class="section-head"><div class="eyebrow">capítulo 01</div><h2>As páginas da <span class="gold">nossa história</span></h2><p>Algumas lembranças merecem ser revisitadas. Edite os textos para colocar os detalhes que só vocês conhecem.</p></div>
+ <div class="timeline">
+  <div class="event"><div class="eyebrow">01 · 04 · 2026</div><h3>O começo de nós</h3><p>O dia em que começou uma história que ganhou um lugar especial no coração.</p></div>
+  <div class="event"><div class="eyebrow">Capítulos vividos</div><h3>Pequenos momentos, grandes significados</h3><p>As conversas, as risadas, as noites juntos e os detalhes simples que se tornam inesquecíveis.</p></div>
+  <div class="event"><div class="eyebrow">Aprendizados</div><h3>Mesmo quando não foi fácil</h3><p>Nem sempre entendemos tudo de primeira. Que cada dificuldade possa ensinar a ouvir melhor, respeitar o tempo e cuidar um do outro.</p></div>
+  <div class="event"><div class="eyebrow">Daqui para frente</div><h3>Uma história em construção</h3><p>Ainda existem tantos lugares para conhecer, sonhos para realizar e motivos para sorrir.</p></div>
+ </div>
+</section>
+<section class="wrap" id="perdao">
+ <div class="section-head"><div class="eyebrow">capítulo especial · de coração aberto</div><h2>Eu te devo um <span class="gold">pedido de perdão</span></h2><p>Uma parte da nossa história que eu não quero esconder. Amar também é reconhecer quando machucamos quem amamos.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">🕊️</div><h3>Pelas vezes em que te estressei</h3><p>Me perdoa por todas as vezes em que minhas palavras, cobranças ou insistências aumentaram o peso dos seus dias. Eu deveria ter percebido quando você precisava de descanso, silêncio e compreensão.</p></div>
+  <div class="card"><div class="icon">💬</div><h3>Pelas coisas que você entendeu errado</h3><p>Às vezes eu não soube explicar o que sentia e acabei criando confusões e inseguranças. Não quero jogar a culpa na sua interpretação: também preciso aprender a me comunicar com clareza, calma e cuidado.</p></div>
+  <div class="card"><div class="icon">🌹</div><h3>Pelas mudanças que demorei a fazer</h3><p>Eu sei que pedir desculpas não basta quando as atitudes continuam iguais. Quero mudar o que te machuca de verdade, sem te fazer carregar o trabalho de me ensinar a cada vez.</p></div>
+  <div class="card"><div class="icon">🤍</div><h3>Pelas safadezas fora de hora</h3><p>Desculpa pelas brincadeiras, insinuações ou conversas íntimas em momentos em que você estava triste, cansada ou não queria. Seu conforto e seus limites vêm antes da minha vontade, sempre.</p></div>
+  <div class="card"><div class="icon">🌧️</div><h3>Quando a tristeza te visita</h3><p>Eu queria conseguir tirar a tristeza de você, mas sei que não posso resolver tudo. Posso, sim, te ouvir sem julgar, perguntar do que você precisa, oferecer um abraço e respeitar seu espaço quando quiser ficar quietinha.</p></div>
+  <div class="card"><div class="icon">❤️</div><h3>Sobre querer você na minha vida</h3><p>Eu te quero muito comigo, nos dias bons e ruins. Mas não quero te prender ou te convencer pelo cansaço. Quero que você se sinta livre para escolher ficar porque existe respeito, segurança e amor entre nós.</p></div>
+ </div>
+ <div class="card" style="max-width:820px;margin:25px auto 0;text-align:center;padding:35px"><div class="eyebrow">uma mensagem que vem de mim</div><h3>Não quero um perdão automático. Quero merecer sua confiança.</h3><p>Gaby, me desculpa por todas as vezes em que fui mais uma preocupação quando você já tinha tantas. Pelos momentos em que tentei conversar na hora errada, em que deixei o medo falar mais alto, em que insisti em vez de escutar e em que não percebi sua tristeza. Não espero que uma página bonita apague o que aconteceu. Quero aprender com cada erro e mostrar, nos dias comuns, que eu consigo cuidar melhor de nós.</p><button class="btn small" onclick="show('Uma coisa que eu quero que você saiba','Você não precisa me perdoar depressa, fingir que está bem ou guardar o que te incomoda. Eu quero te ouvir com respeito e sem transformar sua sinceridade em outra discussão.','do meu coração')">Toque para ler mais uma promessa 💌</button></div>
+</section>
+<section class="wrap" id="surpresas">
+ <div class="section-head"><div class="eyebrow">capítulo 02</div><h2>Dez pequenos <span class="gold">presentes</span></h2><p>Toque em cada caixinha. Uma surpresa por vez — e cada descoberta aproxima vocês do último capítulo.</p></div>
+ <div class="grid surprise-grid" id="surpriseGrid"></div>
+</section>
+<section class="wrap" id="universo">
+ <div class="section-head"><div class="eyebrow">capítulo 03</div><h2>O universo de <span class="gold">nós dois</span></h2><p>Entre estrelas, sonhos e sentimentos, escolha um mundo para explorar.</p></div>
+ <div class="grid">
+  <div class="card realm"><div class="icon">🌙</div><h3>Nosso céu</h3><p>As lembranças que iluminam os dias comuns.</p><button class="btn ghost small" onclick="realm('Nosso céu','Que a gente nunca deixe de encontrar beleza nas pequenas coisas: uma conversa, uma risada inesperada ou simplesmente estar perto, mesmo de longe.')">Explorar</button></div>
+  <div class="card realm"><div class="icon">❤️</div><h3>Nosso coração</h3><p>Palavras que às vezes ficam guardadas.</p><button class="btn ghost small" onclick="realm('Nosso coração','Eu quero que você se sinta amada, respeitada e livre para ser você. Quero aprender a ouvir sem pressionar e demonstrar amor também nas atitudes.')">Explorar</button></div>
+  <div class="card realm"><div class="icon">🏡</div><h3>Nosso lar</h3><p>O sonho de construir um cantinho nosso.</p><button class="btn ghost small" onclick="realm('Nosso lar','Imagino um lugar com paz, parceria, risadas, cuidado e espaço para os sonhos de cada um. Um lar não é só uma casa: é a forma como a gente se trata.')">Explorar</button></div>
+  <div class="card realm"><div class="icon">🌹</div><h3>Nossas escolhas</h3><p>Amar também é aprender a cuidar.</p><button class="btn ghost small" onclick="realm('Nossas escolhas','Que a gente escolha conversar com carinho, reconhecer erros, respeitar limites e não transformar diferenças em uma disputa. Os dois merecem cuidado.')">Explorar</button></div>
+  <div class="card realm"><div class="icon">✨</div><h3>Nossos sonhos</h3><p>O que ainda queremos viver.</p><button class="btn ghost small" onclick="realm('Nossos sonhos','Que venham viagens, conquistas, planos, dias tranquilos e muitas primeiras vezes. Não precisamos ter tudo resolvido hoje: podemos construir aos poucos.')">Explorar</button></div>
+  <div class="card realm"><div class="icon">🪐</div><h3>Nosso infinito</h3><p>Um capítulo que ainda não tem fim.</p><button class="btn ghost small" onclick="realm('Nosso infinito','O futuro não precisa ser uma promessa perfeita. Quero que seja uma escolha diária, leve e verdadeira, feita com carinho pelos dois.')">Explorar</button></div>
+ </div>
+</section>
+<section class="wrap" id="jogos">
+ <div class="section-head"><div class="eyebrow">capítulo 04</div><h2>Um pouco de <span class="gold">diversão</span></h2><p>Pequenos jogos para sorrir, lembrar e descobrir surpresas.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">💭</div><h3>Quanto você me conhece?</h3><p>Responda três perguntas sobre esta história.</p><button class="btn small" onclick="startQuiz()">Jogar</button></div>
+  <div class="card"><div class="icon">🚪</div><h3>Escolha uma porta</h3><p>Três portas. Três mensagens escondidas.</p><button class="btn small" onclick="openDoors()">Escolher</button></div>
+  <div class="card"><div class="icon">💗</div><h3>Encontre os corações</h3><p>Encontre cinco corações escondidos no tabuleiro.</p><button class="btn small" onclick="heartGame()">Começar</button></div>
+  <div class="card"><div class="icon">📝</div><h3>Complete a frase</h3><p>Uma frase para terminar do seu jeito.</p><button class="btn small" onclick="sentenceGame()">Jogar</button></div>
+  <div class="card"><div class="icon">🔐</div><h3>Palavra secreta</h3><p>Descubra a palavra que abre a mensagem.</p><button class="btn small" onclick="secretWord()">Desbloquear</button></div>
+  <div class="card"><div class="icon">🎁</div><h3>Presente surpresa</h3><p>Um mimo especial escolhido pelo acaso.</p><button class="btn small" onclick="randomGift()">Abrir presente</button></div>
+ </div>
+</section>
+<section class="wrap" id="futuro">
+ <div class="section-head"><div class="eyebrow">capítulo 05</div><h2>O que ainda vamos <span class="gold">viver</span></h2><p>Não é sobre prever o futuro. É sobre os sonhos que podem inspirar o caminho.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">💍</div><h3>Um dia especial</h3><p>Celebrar o amor e as escolhas que fizemos, com calma, maturidade e alegria.</p></div>
+  <div class="card"><div class="icon">🏡</div><h3>Nosso cantinho</h3><p>Construir um lar com respeito, parceria, aconchego e boas memórias.</p></div>
+  <div class="card"><div class="icon">✈️</div><h3>Novos lugares</h3><p>Conhecer lugares, experimentar coisas novas e colecionar histórias.</p></div>
+  <div class="card"><div class="icon">🌱</div><h3>Crescer juntos</h3><p>Torcer pelas conquistas individuais e apoiar os sonhos um do outro.</p></div>
+  <div class="card"><div class="icon">☕</div><h3>Dias simples</h3><p>Valorizar também os dias comuns: uma conversa, um café, uma noite tranquila.</p></div>
+  <div class="card"><div class="icon">🤍</div><h3>Continuar escolhendo</h3><p>Com liberdade, carinho e vontade dos dois, escrever os próximos capítulos.</p></div>
+ </div>
+</section>
+<section class="wrap" id="gabynota">
+ <div class="section-head"><div class="eyebrow">capítulo 06 · espaço dela</div><h2>Um cantinho só <span class="gold">seu</span></h2><p>Gaby, esse espaço é para sua voz. Você pode escrever com sinceridade, sem medo de precisar encontrar as palavras perfeitas.</p></div>
+ <div class="card" style="max-width:720px;margin:auto">
+  <div class="field"><label>O que está no seu coração hoje?</label><textarea id="feel" placeholder="Pode escrever livremente..."></textarea></div>
+  <div class="field"><label>O que você gostaria que eu entendesse melhor?</label><textarea id="understand" placeholder="Quero te ouvir..."></textarea></div>
+  <div class="field"><label>O que você gostaria que a gente fizesse diferente?</label><textarea id="change" placeholder="Toda ideia merece ser conversada com carinho..."></textarea></div>
+  <div class="field"><label>Um sonho que você quer viver comigo</label><input id="dream" placeholder="Escreva seu sonho..."></div>
+  <button class="btn" onclick="saveNote()">Guardar minhas palavras</button> <span id="saveStatus" class="note"></span>
+  <p class="note">As respostas ficam salvas apenas neste navegador e aparelho. Não são enviadas automaticamente para outra pessoa. Se quiser compartilhar, use o botão abaixo.</p>
+  <button class="btn ghost small" onclick="shareNote()">Compartilhar respostas</button>
+ </div>
+</section>
+<section class="wrap" id="final">
+ <div id="finalLocked" class="card center" style="max-width:650px;margin:0 auto 30px"><div class="icon">🔒</div><h3>Uma última surpresa espera por você</h3><p>Abra as 10 caixinhas para desbloquear a carta final.</p><button class="btn small" onclick="go('surpresas')">Voltar às surpresas</button></div>
+ <div id="finalContent" style="display:none">
+ <div class="section-head"><div class="eyebrow">último capítulo</div><h2>Uma carta para <span class="gold">Gaby</span></h2><p>O final desta experiência é uma mensagem — e o começo de todos os capítulos que ainda podem vir.</p></div>
+ <div id="letter">
+  <div class="center"><div class="orb" style="width:75px;height:75px"><span style="font-size:30px">♥</span></div><div class="eyebrow">com carinho, para você</div></div>
+  <p class="letter-text">Gaby,
+
+Se existe algo que eu quero que você leve desta história, é que você merece ser amada com carinho, respeito, paciência e verdade.
+
+Quero te pedir perdão de um jeito que talvez eu nunca tenha conseguido dizer direito. Desculpa por cada vez que te estressei, que insisti quando você já estava cansada, que não escolhi bem minhas palavras e acabei fazendo você entender coisas diferentes do que eu queria expressar. Eu sei que a intenção não apaga o efeito das minhas atitudes.
+
+Me perdoa pelas mudanças que demorei a fazer, pelas promessas que não consegui mostrar em atitudes e pelas safadezas ou brincadeiras íntimas fora de hora, quando você precisava de acolhimento, não disso. Eu quero respeitar o seu tempo, seu corpo, seus sentimentos e seus limites sem fazer você se sentir culpada.
+
+Nos dias em que a tristeza chegar, eu quero ser um lugar tranquilo na sua vida. Não vou fingir que consigo tirar toda a sua dor, mas quero aprender a escutar sem interromper, oferecer carinho sem cobrar e ficar ao seu lado quando isso te fizer bem. E, se você precisar de espaço, quero respeitar também.
+
+Eu quero muito ter você comigo, Gaby. Quero dividir os dias, construir sonhos e descobrir a vida ao seu lado. Mas eu não quero ter você de qualquer jeito, nem te prender pelo medo de te perder. Quero que você escolha estar comigo porque se sente amada, respeitada e segura.
+
+Não te peço para esquecer o que doeu nem para me perdoar antes de estar pronta. O que eu posso fazer é assumir a responsabilidade pelos meus erros, mudar de verdade e mostrar isso na forma como te trato todos os dias.
+
+Obrigado por cada conversa, cada risada, cada momento e por fazer parte da minha vida. Eu ainda sonho com tantas coisas ao seu lado, mas quero construir tudo sem pressa, com parceria e com a vontade dos dois.
+
+Que a nossa história tenha mais leveza, compreensão, carinho e motivos para sorrir. Que a gente nunca esqueça que somos duas pessoas aprendendo, crescendo e escolhendo como cuidar desse amor.
+
+Feliz nosso dia. Eu gosto de você, Gaby. ❤️
+
+<strong>Com amor,</strong>
+<strong>seu namorado.</strong></p>
+  <div class="center"><button class="btn" onclick="confettiHearts()">Enviar um abraço em forma de corações ♥</button></div>
+ </div>
+ <div class="center" style="margin-top:35px"><p class="eyebrow">01 · 04 · 2026 — para todos os capítulos que virão</p><p class="serif gold" style="font-size:1.8rem">Nossa história continua...</p></div>
+</div>
+</section>
+</main>
+<footer><div class="footer-heart">♥</div><p class="serif" style="font-size:1.5rem;color:#e7c6d2">Feito para Gaby</p><p>Um presente digital, sem fotos — só palavras, detalhes e carinho.</p></footer>
+</div>
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div class="eyebrow" id="modalTag">uma surpresa</div><h2 id="modalTitle" class="gold">Para você</h2><div id="modalBody"></div><div id="modalActions"></div></div></div>
+<script>
+const startDate=new Date(2026,3,1);
+function duration(){let now=new Date(),d=Math.max(0,now-startDate),days=Math.floor(d/86400000),years=now.getFullYear()-2026,months=now.getMonth()-3,rest=now.getDate()-1;if(rest<0){months--;rest+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}if(months<0){years--;months+=12}if(years<0){years=0;months=0;rest=0}return `<div class="timebox"><strong>${years}</strong><span>anos</span></div><div class="timebox"><strong>${months}</strong><span>meses</span></div><div class="timebox"><strong>${rest}</strong><span>dias</span></div><div class="timebox"><strong>${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}</strong><span>agora</span></div>`}
+document.getElementById('introCounter').innerHTML=duration();document.getElementById('mainCounter').innerHTML=duration();setInterval(()=>{document.getElementById('introCounter').innerHTML=duration();document.getElementById('mainCounter').innerHTML=duration()},60000);
+const particles=document.getElementById('particles');for(let i=0;i<24;i++){let p=document.createElement('span');p.className='particle';p.textContent=['✦','·','♥','✧'][i%4];p.style.left=Math.random()*100+'%';p.style.animationDuration=(12+Math.random()*18)+'s';p.style.animationDelay=(-Math.random()*25)+'s';p.style.fontSize=(8+Math.random()*15)+'px';particles.appendChild(p)}
+function enterSite(){document.getElementById('intro').style.display='none';document.getElementById('site').style.display='block';window.scrollTo(0,0)}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function goFinal(){if(opened.size===10){document.getElementById('finalLocked').style.display='none';document.getElementById('finalContent').style.display='block';go('final')}else{show('Ainda há surpresas esperando','Abra as '+(10-opened.size)+' caixinhas restantes para revelar a carta final. ♥','capítulo bloqueado')}}
+const surprises=[
+['Uma declaração','Você é uma pessoa especial para mim. Gosto de ter você na minha vida e quero demonstrar isso também nas pequenas atitudes.'],
+['Uma promessa','Prometo me esforçar para ouvir melhor, respeitar seu tempo e conversar com carinho, inclusive nos dias difíceis.'],
+['Um motivo','Seu jeito, suas particularidades e até os pequenos detalhes que fazem você ser única.'],
+['Uma lembrança','Guarde com carinho os momentos simples: eles também fazem parte das histórias mais bonitas.'],
+['Um desejo','Quero que você tenha paz, realize seus sonhos e nunca deixe de ser você.'],
+['Um segredo','Às vezes, no meio de um dia comum, lembro de você e sorrio sem perceber.'],
+['Um carinho','Se hoje estiver pesado, respire. Você não precisa resolver tudo de uma vez.'],
+['Uma escolha','Quero que o nosso amor seja um lugar de respeito e liberdade, nunca de cobrança.'],
+['Um sonho','Imagino a gente conhecendo lugares novos e criando memórias que ainda nem existem.'],
+['Uma última surpresa','O presente mais bonito não é uma promessa perfeita: é a vontade sincera de cuidar melhor da nossa história, um dia de cada vez.']
+];
+let opened=new Set(JSON.parse(localStorage.getItem('nossaHistoriaSurpresas')||'[]'));
+function renderSurprises(){let g=document.getElementById('surpriseGrid');g.innerHTML='';surprises.forEach((s,i)=>{let d=document.createElement('div');d.className='card surprise '+(opened.has(i)?'opened':'');d.innerHTML=`<div class="box">${opened.has(i)?'💝':'🎁'}</div><strong>${opened.has(i)?s[0]:'Caixa '+(i+1)}</strong><small>${opened.has(i)?'DESCOBERTA':'TOQUE PARA ABRIR'}</small>`;d.onclick=()=>{opened.add(i);renderSurprises();updateProgress();loadNote();if(opened.size===10){document.getElementById('finalLocked').style.display='none';document.getElementById('finalContent').style.display='block'}show(s[0],s[1],'presente '+(i+1))};g.appendChild(d)})}
+function updateProgress(){localStorage.setItem('nossaHistoriaSurpresas',JSON.stringify([...opened]));let n=opened.size;document.getElementById('progress').style.width=(n*10)+'%';document.getElementById('progressText').textContent=n+' de 10 surpresas descobertas'+(n===10?' — último capítulo liberado ♥':'');}
+function show(title,body,tag='mensagem',actions=''){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML='<p>'+body+'</p>';document.getElementById('modalTag').textContent=tag;document.getElementById('modalActions').innerHTML=actions;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function realm(t,b){show(t,b,'um mundo do nosso universo')}
+function startQuiz(){let qs=[['Qual é a data que marca o começo desta história?',['01/04/2026','12/10/2026','25/12/2025'],0],['O que faz uma relação ficar mais forte?',['Nunca discordar','Ouvir, respeitar e conversar','Ter sempre razão'],1],['O que este site quer celebrar?',['Uma história em construção','Uma competição','Uma história perfeita'],0]];let i=0,score=0;function q(){if(i===qs.length){show('Fim do quiz!',`Você acertou ${score} de ${qs.length}. O mais importante é continuar descobrindo um ao outro. ♥`,'resultado');return}let x=qs[i];document.getElementById('modalTitle').textContent='Pergunta '+(i+1);document.getElementById('modalTag').textContent='quanto você me conhece?';document.getElementById('modalBody').innerHTML='<p>'+x[0]+'</p>'+x[1].map((a,j)=>`<button class="answer" onclick="quizAnswer(${j})">${a}</button>`).join('');window.quizAnswer=(j)=>{if(j===x[2])score++;i++;q()};document.getElementById('modalActions').innerHTML=''}q();document.getElementById('modal').classList.add('show')}
+function openDoors(){show('Escolha sua porta','Qual surpresa você quer encontrar?','três caminhos',`<div class="door-row"><button class="door" onclick="door(0)">✧<br>Ⅰ</button><button class="door" onclick="door(1)">♥<br>Ⅱ</button><button class="door" onclick="door(2)">✦<br>Ⅲ</button></div>`)}
+function door(n){let a=['Às vezes, o melhor presente é saber que alguém torce por você. Eu torço por você, sempre.','Que nunca faltem motivos para rir, conversar e fazer planos que deixem o coração quentinho.','Você não precisa ser perfeita para ser importante. Gosto de você por ser quem é.'];show('Sua porta se abriu',a[n],'surpresa encontrada')}
+function heartGame(){let found=new Set(),targets=new Set([1,4,7,10,14]);let b=Array.from({length:16},(_,i)=>`<button class="heart-tile" id="tile${i}" onclick="findHeart(${i})">✧</button>`).join('');show('Encontre cinco corações','Toque nas estrelas. Existem cinco corações escondidos!','jogo',`<div class="heart-board">${b}</div><p id="heartCount">0 de 5 encontrados</p>`);window.findHeart=(i)=>{let el=document.getElementById('tile'+i);if(!el||el.classList.contains('found'))return;if(targets.has(i)){el.textContent='💗';el.classList.add('found');found.add(i)}else{el.textContent='·';el.disabled=true}document.getElementById('heartCount').textContent=found.size+' de 5 encontrados';if(found.size===5)setTimeout(()=>show('Todos encontrados!','Você encontrou todos os corações. Que nunca faltem pequenos motivos para sorrir. ♥','parabéns'),300)}}
+function escapeHTML(value){return String(value).replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]))}
+function sentenceGame(){show('Complete a frase','A melhor parte de construir uma história a dois é...','sua vez',`<textarea id="sentence" placeholder="Termine do seu jeito..."></textarea><button class="btn small" onclick="finishSentence()">Concluir</button>`)}
+function finishSentence(){let value=document.getElementById('sentence').value.trim()||'Uma resposta guardada no coração.';show('Que resposta linda!','Sua frase: '+escapeHTML(value),'frase completada')}
+function secretWord(){show('Palavra secreta','Dica: é o sentimento que dá nome a este site.','desafio',`<input id="secretInput" placeholder="Digite a palavra..."><button class="btn small" onclick="checkSecret()">Tentar</button>`)}
+function checkSecret(){let v=document.getElementById('secretInput').value.trim().toLowerCase();if(v==='amor'){show('Desbloqueado!','O amor também aparece no cuidado, no respeito, na amizade e nas escolhas de todos os dias. ♥','palavra correta')}else show('Quase lá!','Tente mais uma vez. A dica está no título deste capítulo.','continue tentando')}
+function randomGift(){let a=['Hoje você merece um descanso e um carinho.','Que uma coisa boa e inesperada encontre você hoje.','Nunca diminua seus sonhos para caber nas expectativas dos outros.','Lembre-se: sua voz importa e seus sentimentos merecem espaço.'];show('Seu presente de hoje',a[Math.floor(Math.random()*a.length)],'presente aleatório')}
+function saveNote(){let data={feel:document.getElementById('feel').value,understand:document.getElementById('understand').value,change:document.getElementById('change').value,dream:document.getElementById('dream').value};localStorage.setItem('nossaHistoriaGaby',JSON.stringify(data));document.getElementById('saveStatus').textContent='Salvo neste aparelho ♥'}
+function shareNote(){let data=JSON.parse(localStorage.getItem('nossaHistoriaGaby')||'{}');let t='Respostas da Gaby\\n\\nO que sinto: '+(data.feel||'—')+'\\nO que quero que entenda: '+(data.understand||'—')+'\\nO que gostaria de mudar: '+(data.change||'—')+'\\nMeu sonho: '+(data.dream||'—');if(navigator.share)navigator.share({title:'Respostas da Gaby',text:t});else{navigator.clipboard?.writeText(t);saveStatus.textContent='Texto copiado (se o navegador permitir).'}}
+function confettiHearts(){for(let i=0;i<32;i++){let p=document.createElement('span');p.textContent=['♥','✦','💗','✧'][i%4];p.style.position='fixed';p.style.left=Math.random()*100+'vw';p.style.top='100vh';p.style.zIndex=50;p.style.fontSize=(14+Math.random()*22)+'px';p.style.pointerEvents='none';p.style.transition='transform 3s ease,opacity 3s';document.body.appendChild(p);requestAnimationFrame(()=>{p.style.transform=`translateY(-110vh) rotate(${Math.random()*500}deg)`;p.style.opacity='0'});setTimeout(()=>p.remove(),3200)}}
+renderSurprises();updateProgress();loadNote();if(opened.size===10){document.getElementById('finalLocked').style.display='none';document.getElementById('finalContent').style.display='block'}
+</script>
+</body></html>
